@@ -1,16 +1,31 @@
-import { ReactElement } from 'react'
+import { HTMLAttributes } from 'react'
 import styled from 'styled-components'
-import { color, layout, LayoutProps, ColorProps } from 'styled-system'
+import {
+  border,
+  BorderProps,
+  color,
+  ColorProps,
+  flexbox,
+  FlexboxProps,
+  layout,
+  LayoutProps,
+  space,
+  SpaceProps
+} from 'styled-system'
 
 type WrapperProps = LayoutProps &
-  ColorProps & {
-    as?: ReactElement
+  ColorProps &
+  SpaceProps &
+  FlexboxProps &
+  BorderProps &
+  HTMLAttributes<HTMLDivElement> & {
+    as?: string
   }
 
-const WrapperElement: React.FC<WrapperProps> = styled.div(color, layout)
+const WrapperElement: React.FC<WrapperProps> = styled.div(color, layout, space, flexbox, border)
 
-const WrapperComponent: React.FC<WrapperProps> = ({ children, ...props }) => (
+const Wrapper: React.FC<WrapperProps> = ({ children, ...props }) => (
   <WrapperElement {...props}>{children}</WrapperElement>
 )
 
-export { WrapperComponent }
+export { Wrapper }
