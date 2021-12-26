@@ -10,6 +10,10 @@ const GlobalStyles = createGlobalStyle`
   html, button {
     font-family: 'Poppins', sans-serif;
   }
+
+  button {
+    cursor: pointer;
+  }
 `
 
 export { GlobalStyles }

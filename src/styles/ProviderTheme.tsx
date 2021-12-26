@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components'
 const theme = {
   colors: {
     red: '#DA2535',
-    pink: '#f7c789',
+    pink: '#f7c7b9',
     white: '#f9f9f9',
     gray200: '#404040',
     gray: '#8d8d8d',
