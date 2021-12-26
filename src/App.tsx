@@ -1,10 +1,7 @@
-import { theme } from './styles/ProviderTheme'
+import { Home } from './pages/Home'
+
 function App() {
-  return (
-    <>
-      <h1>Christmas</h1>
-    </>
-  )
+  return <Home />
 }
 
 export { App }
