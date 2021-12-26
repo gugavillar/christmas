@@ -9,8 +9,8 @@ type WrapperProps = LayoutProps &
 
 const WrapperElement: React.FC<WrapperProps> = styled.div(color, layout)
 
-const Wrapper: React.FC<WrapperProps> = ({ children, ...props }) => (
+const WrapperComponent: React.FC<WrapperProps> = ({ children, ...props }) => (
   <WrapperElement {...props}>{children}</WrapperElement>
 )
 
-export { Wrapper }
+export { WrapperComponent }
